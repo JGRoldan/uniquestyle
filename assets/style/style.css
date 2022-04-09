@@ -1,0 +1,161 @@
+@font-face {
+    font-family: mentra;
+    src: url('MENTRA.otf');
+}
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    border-radius: 10px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgb(0, 0, 0);
+    border-radius: 10px;
+  }
+body{
+    height: auto !important;
+}
+main{
+    width: 100%;
+    height: auto !important;
+    overflow: hidden;
+}
+.first{
+    position:relative;
+    width:100%;
+    height: 100vh;
+}
+h1{
+    font-family: mentra;
+    position: absolute;
+    text-align: center;
+    font-size: 3rem;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+video{
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+}
+.icon{
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.mouse{
+    position: relative;
+}
+.scroll{
+    position: absolute;
+    top:20%;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: scrollDown 1s ease infinite;
+    width: 2px;
+    height: 6px;
+}
+@keyframes scrollDown {
+    0%{
+        top:20%; 
+    }
+    100%{
+        top:30%; 
+    }
+}
+.second{
+    width: 100%;
+    overflow: hidden;
+}
+h2{
+    margin:2rem 0;
+    text-align: center;
+    font-size: 2rem;
+    font-family: mentra;
+}
+.img-container{
+    margin: 0 5px;
+}
+.img-container figure{
+    position: relative;
+    overflow: hidden;
+}
+.img-container figure img{
+    width: 100%;
+    transition: .5s cubic-bezier(.41,.29,.77,.67);
+}
+.img-container figure img:hover{
+    transform: scale(1.5);
+}
+.img-container figure figcaption{
+    position: absolute;
+    z-index: 100;
+    left: -10%;
+    bottom: 20%;
+    transform: rotate(-90deg);
+    font-family: poppins;
+    font-weight: 800;
+    letter-spacing: 5px;
+    font-size: .7rem;
+}
+.pad{
+    width: 25px;
+    height: 40px;
+}
+footer{
+    padding-bottom:5px;
+    text-align: center;
+    font-family: poppins;
+    font-size: .8rem;
+}
+@media screen and (min-width:450px){
+    .img-container figure figcaption{
+        left: -5%;
+    }
+    .pad{
+        width: 30px;
+        height: 50px;
+    }
+    .scroll{
+        width: 4px;
+        height: 8px;
+    }
+}
+@media screen and (min-width:700px){
+    .img-container{
+        columns:2 250px;
+        gap:5px
+    }
+    .img-container{
+        margin: 0 5px;
+    }
+    .img-container figure figcaption{
+        left: -10%;
+        font-size: .8rem;
+    }
+    h1{
+        font-size: 4rem;
+    }
+}
+@media screen and (min-width:950px){
+    .img-container{
+        columns:3 250px;
+    }
+}
+@media screen and (min-width:1200px){
+    .img-container figure figcaption{
+        left: -5%;
+    }
+    h1{
+        font-size: 10rem;
+        color:white
+    }
+}
